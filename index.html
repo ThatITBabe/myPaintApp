@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThatITBabe DrawingApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="paint1.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/068972a724.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div class="container">
+        <section class="tools-board">
+            <div class="row">
+                <label class="title" for="shapes">Shapes</label>
+                <ul class="options">
+                    <li class="option tool" id="rectangle">
+                        <img src="rec.png" alt="rect-shape" style="width: 15px; height: 15px;">
+                        <span>Rectangle</span>
+                    </li>
+                    <li class="option tool" id="circle">
+                        <img src="cir.png" alt="rect-shape" style="width: 15px; height: 15px;">
+                        <span>Circle</span>
+                    </li>
+                    <li class="option tool" id="triangle">
+                        <img src="tri.png" alt="tri-shape" style="width: 15px; height: 15px;">
+                        <span>Triangle</span>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="fill-color">
+                        <label for="fill-color">Fill Color</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <label class="title" for="options">Options</label>
+                <ul class="options">
+                    <li class="option active tool" id="brush">
+                        <img src="brush.png" alt="brush-icon" style="width: 15px; height: 15px;">
+                        <span>Brush</span>
+                    </li>
+                    <li class="option tool" id="eraser">
+                        <img src="eraser.png" alt="eraser-icon" style="width: 15px; height: 15px;">
+                        <span>Eraser</span>
+                    </li>
+                    <li class="option">
+                        <input type="range" id="size-slider" min="1" max="38" value="5">
+                    </li>
+                </ul>
+            </div>
+            <div class="row colors">
+                <label class="title" for="colors">Colors</label>
+                <ul class="options">
+                    <li class="option">
+                        
+                    </li>
+                    <li class="option selected">
+                        
+                    </li>
+                    <li class="option">
+                        
+                    </li>
+                    <li class="option">
+                        
+                    </li>
+                    <li class="option">
+                         <input type="color" value="#4a98F7" id="color-picker">                       
+                    </li>
+                </ul>
+            </div>
+            <div class="row buttons">
+                <button class="clear-canvas">Clear Canvas</button>
+                <button class="same-as-image">Save As Image</button>
+            </div>
+        </section>
+        <section class="drawing-board">
+            <canvas id="canvas"></canvas>
+        </section>
+   </div>
+   <!-- <div class="container ">
+
+   </div> -->
+    
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

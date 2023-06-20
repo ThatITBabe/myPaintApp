@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #4a9bf7;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  padding: 10px;
+  max-width: 1050px;
+}
+
+section {
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+}
+
+.tools-board {
+  width: 210px;
+  padding: 15px 22px 0;
+}
+.tools-board .row {
+  margin-bottom: 20px;
+}
+.tools-board .row .options {
+  list-style-type: none;
+  margin: 10px 0 0 5px;
+}
+.tools-board .row .options .option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.tools-board .row .options .option #fill-color {
+  height: 14px;
+  width: 14px;
+  cursor: pointer;
+}
+.tools-board .row .options .option #fill-color:checked ~ label {
+  color: #4a98F7;
+}
+.tools-board .row .options .option #size-slider {
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+}
+.tools-board .buttons button {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 11px 0;
+  margin-bottom: 13px;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.tools-board .buttons .clear-canvas {
+  color: #6c757d;
+  border: 1px solid #6c757d;
+  transition: all 0.3s ease;
+}
+.tools-board .row .clear-canvas:hover {
+  background: #6c757d;
+  color: #fff;
+}
+.tools-board .row .same-as-image {
+  background: #4a98F7;
+  border: 1px solid #4a98F7;
+}
+.tools-board .colors .options {
+  display: flex;
+  justify-content: space-between;
+}
+.tools-board .colors .option {
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  border-radius: 50%;
+  margin-top: 3px;
+  position: relative;
+}
+.tools-board .colors .option.selected::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 12px;
+  width: 12px;
+  background-color: inherit;
+  border-radius: inherit;
+  border: 2px solid white;
+  transform: translate(-50%, -50%);
+}
+.tools-board .colors .option:first-child.selected::before {
+  border-color: #ccc;
+}
+.tools-board .colors .option:nth-child(1) {
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+}
+.tools-board .colors .option:nth-child(2) {
+  background-color: #000; 
+}
+.tools-board .colors .option:nth-child(3) {
+  background-color: #e02020;
+}
+.tools-board .colors .option:nth-child(4) {
+  background-color: #6dd400;
+}
+.tools-board .colors .option:nth-child(5) {
+  background-color: #4a98f7;
+}
+.tools-board .colors .option #color-picker {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.option:is(:hover, .active) img {
+  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.option:is(:hover, .active) :where(span, label) {
+  color: #4a98f7;
+}
+
+.option :where(span, label) {
+  color: #5a6168;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.drawing-board {
+  flex: 1;
+}
+.drawing-board canvas {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */
